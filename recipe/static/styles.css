@@ -1,0 +1,289 @@
+/* styles.css */
+
+/* Общие стили */
+/* styles.css */
+
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #5e5e5e, #494949); /* Пример градиента */
+    color: #ffffff; /* Белый текст для лучшего контраста на темном фоне */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #818080; /* Немного прозрачности для контейнера */
+    border-radius: 10px; /* Скругленные углы для контейнера */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Тень для контейнера */
+    margin-top: 20px;
+}
+
+/* Стили для навигационной панели */
+header {
+    background-color: #0056b3; /* Темный фон для шапки */
+    color: #660202; /* Белый текст */
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень под шапкой */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.5em;
+    border-radius: 5px; /* Скругленные углы для ссылок */
+    transition: background-color 0.3s; /* Плавный переход фона */
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Слегка осветляется при наведении */
+}
+
+/* Остальные стили... */
+
+/* Стили для главной страницы */
+.recipe-preview {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: #999999;
+    padding: 1em;
+}
+
+.recipe-preview:first-child {
+    flex-direction: column;
+    align-items: start;
+}
+
+.recipe-preview img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    margin-right: 1em;
+}
+
+.recipe-preview:first-child img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.recipe-preview h2 {
+    margin: 0.5em 0;
+}
+
+.recipe-preview p {
+    margin: 0;
+}
+
+
+.recipe-small {
+    flex: 1;
+}
+
+
+.recipe-large {
+    flex: 2;
+}
+
+.recipe-link {
+    display: inline-block;
+    margin-top: 1em;
+    background-color: #4984c2;
+    color: rgb(255, 255, 255);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.recipe-link:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+    background-color: #8a8a8a;
+    padding: 2em;
+    border-radius: 8px;
+    margin-top: 2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-field {
+    margin-bottom: 1em;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #ffffff; 
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.form-field input[type="submit"] {
+    background-color: #0056b3; 
+    color: white;
+    padding: 0.6em 1.2em;
+    border: none;
+    width: 200px;
+    align-self: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.form-field input[type="submit"]:hover {
+    background-color: #003974;
+}
+
+.errorlist {
+    color: #ff0000; 
+    list-style-type: none;
+    padding: 0;
+}
+
+.errorlist li {
+    margin-bottom: 0.5em;
+}
+
+
+
+.registration-form h2 {
+    color: #333; 
+    text-align: center;
+    margin-bottom: 1em;
+    
+}
+
+.registration-form {
+  
+    max-width: 400px;
+    margin: 2em auto; 
+    padding: 2em;
+    background-color: #b4b4b4; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.registration-form label {
+    color: rgb(252, 252, 252);
+    margin-bottom: 0.5em;
+}
+
+.registration-form input[type='text'],
+.registration-form input[type='email'],
+.registration-form input[type='password'] {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    
+}
+
+.registration-form button {
+    padding: 0.6em;
+    background-color: #5e5e5e;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.registration-form button:hover {
+    background-color: #494949; 
+}
+
+
+.errorlist {
+    color: #ff0000; 
+    list-style-type: none;
+    padding: 0;
+}
+
+.errorlist li {
+    margin-bottom: 0.5em;
+}
+
+
+.login-form h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 2em auto; 
+    padding: 2em;
+    background-color: #b6b6b6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 0.5em;
+}
+
+.login-form input[type='text'],
+.login-form input[type='password'] {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form button {
+    padding: 0.6em;
+    background-color: #5e5e5e; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-form button:hover {
+    background-color: #494949;
+}
+
+.errorlist {
+    color: #ff0000; 
+    list-style-type: none;
+    padding: 0;
+}
+
+.errorlist li {
+    margin-bottom: 0.5em;
+}

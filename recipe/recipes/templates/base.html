@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>{% block title %}
+            {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Домашняя</a>
+            {% block nav %}
+            {% endblock %}
+            {% if user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Выйти</button>
+            </form>
+            {% else %}
+                <a href="{% url 'login' %}">Войти</a> 
+                
+                <a href="{% url 'register' %}">Зарегистрироваться</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="recipe-detail">
+        <h1>{{ recipe.name }}</h1>
+        {% if recipe.image %}
+        <img src="{{ recipe.image.url }}" alt="{{ recipe.name }}">
+        {% endif %}
+        <p><strong>Описание:</strong> {{ recipe.description }}</p>
+        <p><strong>Время готовки:</strong> {{ recipe.preparation_time }} минут</p>
+        <p><strong>Шаги:</strong></p>
+        <div>{{ recipe.steps|linebreaks }}</div> 
+        <p><strong>Автор рецепта:</strong> {{ recipe.author }}</p>
+    </div>
+</div>
+{% endblock %}
